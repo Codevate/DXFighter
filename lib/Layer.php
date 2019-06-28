@@ -53,7 +53,6 @@ class Layer extends BasicObject {
     array_push($output, 70, $this->flag);
     array_push($output, 62, $this->color);
     array_push($output, 6, $this->lineType);
-    array_push($output, 370, 300);
     return implode($output, PHP_EOL);
   }
 }
