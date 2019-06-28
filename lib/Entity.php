@@ -23,7 +23,6 @@ class Entity extends BasicObject {
   protected $paperSpace = 0;
   protected $lineType = 'BYLAYER';
   protected $lineTypeScale = 1;
-  protected $lineWidth = 013;
   protected $hidden = 0;
 
   /**
@@ -119,13 +118,6 @@ class Entity extends BasicObject {
   }
 
   /**
-   * @param $lineWidth
-   */
-  public function setLineWidth($lineWidth) {
-    $this->lineWidth = $lineWidth;
-  }
-
-  /**
    * Public function to hide an entity
    *
    * @param $hidden
@@ -148,7 +140,6 @@ class Entity extends BasicObject {
     array_push($output, 67, $this->paperSpace);
     array_push($output, 8, $this->layer);
     array_push($output, 6, $this->lineType);
-    array_push($output, 370, $this->lineWidth);
     array_push($output, 62, $this->color);
     array_push($output, 48, $this->lineTypeScale);
     array_push($output, 60, $this->hidden);
